@@ -306,19 +306,8 @@
       </div>
     </section>
 
-    <div class="project-grid">
-      <a class="project-card" href="https://github.com/komendant-zero/easy-loader-flutter" target="_blank">
-        <p class="project-num">001</p>
-        <p class="project-name">Easy Loader</p>
-        <p class="project-desc">Video and audio downloader for YouTube and TikTok. Pick quality, format, bitrate.</p>
-        <div class="project-tags">
-          <span class="project-tag">Flutter</span>
-          <span class="project-tag">Dart</span>
-          <span class="project-tag">Android</span>
-          <span class="project-tag">Windows</span>
-          <span class="project-tag">FFmpeg</span>
-        </div>
-      </a>
+    <div class="project-grid" id="project-grid">
+      <!-- Repositories will be loaded here via GitHub API -->
     </div>
 
     <footer>
@@ -327,5 +316,49 @@
     </footer>
 
   </div>
+
+  <script>
+    async function loadRepos() {
+      const grid = document.getElementById('project-grid');
+      try {
+        const res = await fetch('https://api.github.com/users/komendant-zero/repos?type=public&sort=updated&per_page=20');
+        if (!res.ok) throw new Error('API failed');
+        const repos = await res.json();
+        
+        const exclude = ['komendant-zero', 'komendant-zero.github.io'];
+        let html = '';
+        let count = 1;
+        
+        for (const repo of repos) {
+          if (repo.fork || exclude.includes(repo.name)) continue;
+          
+          const num = String(count).padStart(3, '0');
+          let tags = '';
+          if (repo.language) tags += `<span class="project-tag">${repo.language}</span>`;
+          if (repo.topics) {
+            repo.topics.forEach(t => tags += `<span class="project-tag">${t}</span>`);
+          }
+          
+          // Format repo name (e.g. easy-loader-flutter -> Easy Loader Flutter)
+          const name = repo.name.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          
+          html += `
+            <a class="project-card" href="${repo.html_url}" target="_blank" style="animation-delay: ${0.2 + (count * 0.1)}s">
+              <p class="project-num">${num}</p>
+              <p class="project-name">${name}</p>
+              <p class="project-desc">${repo.description || 'No description provided.'}</p>
+              <div class="project-tags">${tags}</div>
+            </a>
+          `;
+          count++;
+        }
+        
+        grid.innerHTML = html || '<p style="color:var(--dim); font-family:var(--mono); font-size:0.8rem">No projects found.</p>';
+      } catch (err) {
+        grid.innerHTML = '<p style="color:var(--dim); font-family:var(--mono); font-size:0.8rem">Failed to fetch from GitHub.</p>';
+      }
+    }
+    loadRepos();
+  </script>
 </body>
 </html>
