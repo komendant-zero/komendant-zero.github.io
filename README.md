@@ -14,7 +14,7 @@
 ---
 
 <p align="center">
-  <a href="#-english">English</a> • <a href="#-русский">Русский</a>
+  <a href="#-english">English</a> • <a href="#-русский">Русский</a> • <a href="#-support--donations">Support</a>
 </p>
 
 ---
@@ -29,7 +29,7 @@ Modern, lightweight, and responsive developer portfolio built with Vanilla HTML5
 - **Interactive Dot-Matrix Canvas**: Custom HTML5 Canvas grid that dynamically responds to mouse movement.
 - **Spotlight Bento Cards**: Radial gradient border tracking following cursor coordinates.
 - **Project Showcase & GitHub Sync**: Automatically fetches and enriches repositories via GitHub API with an instant fallback cache.
-- **Interactive Dev Terminal**: Built-in CLI emulator supporting interactive commands (`help`, `about`, `projects`, `skills`, `contact`, `clear`) in both English and Russian.
+- **Interactive Dev Terminal**: Built-in CLI emulator supporting interactive commands (`help`, `about`, `projects`, `skills`, `donate`, `contact`, `clear`) in both English and Russian.
 - **Pure Vanilla Stack**: Zero external bundle dependencies for maximum performance (100/100 Google PageSpeed score).
 
 ### 📁 Project Structure
@@ -74,7 +74,7 @@ npx serve .
 - **Интерактивная Canvas-сетка**: Реактивный фон из точек, мягко реагирующий на движение курсора мыши.
 - **Spotlight Bento-карточки**: Радиальная подсветка граней карточек по координатам мыши.
 - **Каталог проектов и синхронизация с GitHub**: Автоматическая подгрузка актуальных данных из GitHub API с надежным кэшем на случай лимитов.
-- **Интерактивный терминал**: Встроенная консоль разработчика с поддержкой команд (`help`, `about`, `projects`, `skills`, `contact`, `clear`) на русском и английском языках.
+- **Интерактивный терминал**: Встроенная консоль разработчика с поддержкой команд (`help`, `about`, `projects`, `skills`, `donate`, `contact`, `clear`) на русском и английском языках.
 - **Чистый стек без тяжелых фреймворков**: Высочайшая скорость загрузки и 100/100 в PageSpeed.
 
 ### 📁 Архитектура файлов
@@ -106,6 +106,19 @@ python -m http.server 8000
 ```bash
 npx serve .
 ```
+
+---
+
+## ☕ Support & Donations (Crypto)
+
+If you find my open-source projects, tools, and libraries helpful, you can support future development:
+
+| Asset | Network | Address |
+| :--- | :--- | :--- |
+| **USDT** | BNB Smart Chain (BEP-20) | `0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321` |
+| **TRON** | TRX (TRON Network) | `TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj` |
+| **Bitcoin** | BTC (Native SegWit) | `bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz` |
+| **Litecoin** | LTC (Native Bech32) | `ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg` |
 
 ---
 

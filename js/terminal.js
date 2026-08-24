@@ -2,6 +2,13 @@
  * terminal.js — Interactive Terminal Emulator with Bilingual Commands & Responses
  */
 
+const cryptoWallets = {
+  usdt_bep20: '0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321',
+  trx: 'TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj',
+  btc: 'bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz',
+  ltc: 'ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg'
+};
+
 const terminalResponses = {
   ru: {
     welcome: `<span class="t-accent">komendant-zero</span> [Версия 2.4.0-release]
@@ -10,6 +17,7 @@ const terminalResponses = {
   <span class="t-cyan">about</span>       - О разработчике и философии разработки
   <span class="t-cyan">projects</span>    - Список созданных проектов и утилит
   <span class="t-cyan">skills</span>      - Ключевой технический стек
+  <span class="t-cyan">donate</span>      - Реквизиты для поддержки проектов (Crypto)
   <span class="t-cyan">contact</span>     - Контакты и копирование ссылки
   <span class="t-cyan">github</span>      - Открыть GitHub профиль в новой вкладке
   <span class="t-cyan">clear</span>       - Очистить экран терминала
@@ -27,6 +35,12 @@ const terminalResponses = {
 - <span class="t-emerald">Mobile & Desktop:</span> Flutter, Dart, Android SDK, Windows Win32
 - <span class="t-emerald">Python & Tools:</span>    Python 3, Node Graph UI, Ren'Py, автоматизация
 - <span class="t-emerald">Мультимедиа:</span>       FFmpeg, yt-dlp, конвейеры транскодирования`,
+    donate: `Поддержка разработки (Crypto):
+- <span class="t-cyan">USDT (BEP-20):</span> <code>0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321</code>
+- <span class="t-accent">TRON (TRX):</span>   <code>TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj</code>
+- <span class="t-yellow">Bitcoin (BTC):</span> <code>bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz</code>
+- <span class="t-emerald">Litecoin (LTC):</span> <code>ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg</code>
+(Адреса также можно скопировать в секции доната на сайте)`,
     contact_copied: `GitHub: <span class="t-cyan">https://github.com/komendant-zero</span> (Скопировано в буфер!)`,
     opening_github: `Открытие https://github.com/komendant-zero...`,
     sudo: `<span class="t-yellow">Доступ разрешён:</span> Вы уже обладаете root-правами в нулевом пространстве.`,
@@ -39,6 +53,7 @@ Type <span class="t-cyan">'help'</span> to see available commands or click quick
   <span class="t-cyan">about</span>       - Print bio and developer philosophy
   <span class="t-cyan">projects</span>    - List all engineered software
   <span class="t-cyan">skills</span>      - Show core technical capabilities
+  <span class="t-cyan">donate</span>      - Crypto donation addresses & support info
   <span class="t-cyan">contact</span>     - Display contact info & copy link
   <span class="t-cyan">github</span>      - Open GitHub profile in new tab
   <span class="t-cyan">clear</span>       - Clear console output
@@ -56,6 +71,12 @@ Type <span class="t-yellow">'github'</span> to open full profile repository list
 - <span class="t-emerald">Mobile/Desktop:</span> Flutter, Dart, Android SDK, Windows Win32
 - <span class="t-emerald">Python & Tools:</span> Python 3, Node Graph UI, Ren'Py, Automation
 - <span class="t-emerald">Multimedia:</span>     FFmpeg, yt-dlp, Audio/Video Conversion Pipelines`,
+    donate: `Support Open-Source Work (Crypto):
+- <span class="t-cyan">USDT (BEP-20):</span> <code>0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321</code>
+- <span class="t-accent">TRON (TRX):</span>   <code>TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj</code>
+- <span class="t-yellow">Bitcoin (BTC):</span> <code>bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz</code>
+- <span class="t-emerald">Litecoin (LTC):</span> <code>ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg</code>
+(You can also click to copy in the Donate section below)`,
     contact_copied: `GitHub: <span class="t-cyan">https://github.com/komendant-zero</span> (Copied to clipboard!)`,
     opening_github: `Opening https://github.com/komendant-zero...`,
     sudo: `<span class="t-yellow">Permission granted:</span> You are already root in zero space.`,
@@ -97,6 +118,8 @@ function runTerminalCommand(cmdText) {
     result = dict.projects;
   } else if (mainCmd === 'skills') {
     result = dict.skills;
+  } else if (mainCmd === 'donate' || mainCmd === 'support') {
+    result = dict.donate;
   } else if (mainCmd === 'contact') {
     if (typeof window.copyContact === 'function') {
       window.copyContact('https://github.com/komendant-zero');

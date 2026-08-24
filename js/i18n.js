@@ -8,6 +8,7 @@ const translations = {
     'nav.projects': 'проекты',
     'nav.skills': 'стек',
     'nav.terminal': 'терминал',
+    'nav.donate': 'донат',
     'nav.contact': 'контакты',
 
     // Hero Section
@@ -43,6 +44,12 @@ const translations = {
     'terminal.prompt.placeholder': 'Введите команду...',
     'terminal.quick.label': 'Быстрые команды:',
 
+    // Donate Section
+    'donate.tag': 'ПОДДЕРЖКА АВТОРА',
+    'donate.title': 'Поддержать разработку',
+    'donate.desc': 'Если мои открытые инструменты и проекты оказались полезны, вы можете поддержать разработку и развитие новых утилит криптовалютой:',
+    'donate.copied': 'Адрес скопирован в буфер: ',
+
     // Contact Section
     'contact.title': 'Давайте создадим что-то вместе',
     'contact.desc': 'Заинтересованы в сотрудничестве, разработке кроссплатформенных приложений или создании инструментов? Напишите на GitHub или скопируйте контакты.',
@@ -63,6 +70,7 @@ const translations = {
     'nav.projects': 'projects',
     'nav.skills': 'stack',
     'nav.terminal': 'terminal',
+    'nav.donate': 'donate',
     'nav.contact': 'contact',
 
     // Hero Section
@@ -97,6 +105,12 @@ const translations = {
     'terminal.desc': 'Explore info, list repositories, or trigger actions directly via the command line interface.',
     'terminal.prompt.placeholder': 'Type command...',
     'terminal.quick.label': 'Quick Commands:',
+
+    // Donate Section
+    'donate.tag': 'SUPPORT & SPONSORSHIP',
+    'donate.title': 'Support Development',
+    'donate.desc': 'If my open-source tools and utilities have helped you, you can support future development with crypto donations:',
+    'donate.copied': 'Address copied to clipboard: ',
 
     // Contact Section
     'contact.title': 'Let\'s Build Something Together',
@@ -171,7 +185,6 @@ function initI18n() {
   if (savedLang && translations[savedLang]) {
     currentLang = savedLang;
   } else {
-    // Default to 'ru' if user locale contains 'ru', otherwise 'ru' as preferred
     const browserLang = (navigator.language || '').toLowerCase();
     currentLang = browserLang.startsWith('ru') ? 'ru' : 'ru';
   }

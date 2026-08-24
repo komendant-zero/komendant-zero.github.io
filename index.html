@@ -54,6 +54,7 @@
           <li><a href="#projects" class="nav-link" data-i18n="nav.projects">проекты</a></li>
           <li><a href="#skills" class="nav-link" data-i18n="nav.skills">стек</a></li>
           <li><a href="#terminal" class="nav-link" data-i18n="nav.terminal">терминал</a></li>
+          <li><a href="#donate" class="nav-link" data-i18n="nav.donate">донат</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="nav.contact">контакты</a></li>
         </ul>
       </nav>
@@ -314,9 +315,115 @@
             <span class="terminal-quick-label" data-i18n="terminal.quick.label">Быстрые команды:</span>
             <button class="t-quick-btn" onclick="runCommand('projects')">projects</button>
             <button class="t-quick-btn" onclick="runCommand('skills')">skills</button>
+            <button class="t-quick-btn" onclick="runCommand('donate')">donate</button>
             <button class="t-quick-btn" onclick="runCommand('about')">about</button>
             <button class="t-quick-btn" onclick="runCommand('contact')">contact</button>
             <button class="t-quick-btn" onclick="runCommand('clear')">clear</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Support & Donations Section -->
+      <section id="donate" class="section">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="donate.tag">ПОДДЕРЖКА АВТОРА</div>
+          <h2 class="section-title" data-i18n="donate.title">Поддержать разработку</h2>
+          <p class="section-desc" data-i18n="donate.desc">
+            Если мои открытые инструменты и проекты оказались полезны, вы можете поддержать разработку и развитие новых утилит криптовалютой:
+          </p>
+        </div>
+
+        <div class="donate-grid">
+          <!-- USDT (BEP-20) -->
+          <div class="crypto-card usdt">
+            <div class="crypto-header">
+              <div class="crypto-info">
+                <div class="crypto-icon usdt">₮</div>
+                <div>
+                  <div class="crypto-name">USDT</div>
+                  <div class="crypto-network">BNB Smart Chain (BEP-20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="crypto-address-box">
+              <span class="crypto-address-text" title="0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321">0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321</span>
+              <button class="crypto-copy-btn" onclick="copyContact('0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TRON (TRX) -->
+          <div class="crypto-card trx">
+            <div class="crypto-header">
+              <div class="crypto-info">
+                <div class="crypto-icon trx">T</div>
+                <div>
+                  <div class="crypto-name">TRON</div>
+                  <div class="crypto-network">TRX (TRON Network)</div>
+                </div>
+              </div>
+            </div>
+            <div class="crypto-address-box">
+              <span class="crypto-address-text" title="TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj">TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj</span>
+              <button class="crypto-copy-btn" onclick="copyContact('TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bitcoin (BTC) -->
+          <div class="crypto-card btc">
+            <div class="crypto-header">
+              <div class="crypto-info">
+                <div class="crypto-icon btc">₿</div>
+                <div>
+                  <div class="crypto-name">Bitcoin</div>
+                  <div class="crypto-network">BTC (Native SegWit)</div>
+                </div>
+              </div>
+            </div>
+            <div class="crypto-address-box">
+              <span class="crypto-address-text" title="bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz">bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz</span>
+              <button class="crypto-copy-btn" onclick="copyContact('bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Litecoin (LTC) -->
+          <div class="crypto-card ltc">
+            <div class="crypto-header">
+              <div class="crypto-info">
+                <div class="crypto-icon ltc">Ł</div>
+                <div>
+                  <div class="crypto-name">Litecoin</div>
+                  <div class="crypto-network">LTC (Native Bech32)</div>
+                </div>
+              </div>
+            </div>
+            <div class="crypto-address-box">
+              <span class="crypto-address-text" title="ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg">ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg</span>
+              <button class="crypto-copy-btn" onclick="copyContact('ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
