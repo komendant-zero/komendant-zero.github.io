@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://komendant-zero.github.io/"><img src="https://img.shields.io/badge/Live-Demo-4f8cff?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"></a>
+  <a href="https://komendant-zero.github.io/"><img src="https://img.shields.io/badge/Website-komendant--zero.github.io-4f8cff?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Language-RU%20%7C%20EN-38bdf8?style=for-the-badge" alt="Languages">
 </p>
