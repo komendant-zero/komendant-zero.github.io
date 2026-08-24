@@ -1,5 +1,5 @@
 /**
- * projects.js — Projects Showcase, Filter Tabs, Spotlight & GitHub Sync
+ * projects.js - Projects Showcase, Filter Tabs, Spotlight & GitHub Sync
  */
 
 const curatedProjects = [

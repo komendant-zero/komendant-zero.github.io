@@ -1,5 +1,5 @@
 /**
- * canvas-bg.js — Interactive Dot-Grid Reactive Background Canvas
+ * canvas-bg.js - Interactive Dot-Grid Reactive Background Canvas
  */
 
 function initCanvasBackground() {

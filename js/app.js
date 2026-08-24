@@ -1,5 +1,5 @@
 /**
- * app.js — Main Application Entrypoint, Toast Notifications & Utilities
+ * app.js - Main Application Entrypoint, Toast Notifications & Utilities
  */
 
 // Toast notification system

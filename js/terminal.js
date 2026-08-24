@@ -1,5 +1,5 @@
 /**
- * terminal.js — Interactive Terminal Emulator with Bilingual Commands & Responses
+ * terminal.js - Interactive Terminal Emulator with Bilingual Commands & Responses
  */
 
 const cryptoWallets = {

@@ -111,16 +111,23 @@ npx serve .
 
 ## ☕ Support & Donations (Crypto)
 
-If you find my open-source projects, tools, and libraries helpful, you can support future development:
+If you find my open-source projects and tools helpful, you can support further development with crypto:
 
-| Asset | Network | Address |
+<p align="left">
+  <img src="https://img.shields.io/badge/USDT_(BEP--20)-26a17b?style=for-the-badge&logo=tether&logoColor=white" alt="USDT BEP-20"/>
+  <img src="https://img.shields.io/badge/TRON_(TRX)-eb0029?style=for-the-badge&logo=tron&logoColor=white" alt="TRON TRX"/>
+  <img src="https://img.shields.io/badge/Bitcoin_(BTC)-f7931a?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin BTC"/>
+  <img src="https://img.shields.io/badge/Litecoin_(LTC)-345d9d?style=for-the-badge&logo=litecoin&logoColor=white" alt="Litecoin LTC"/>
+</p>
+
+| Asset | Network | Wallet Address |
 | :--- | :--- | :--- |
-| **USDT** | BNB Smart Chain (BEP-20) | `0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321` |
-| **TRON** | TRX (TRON Network) | `TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj` |
-| **Bitcoin** | BTC (Native SegWit) | `bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz` |
-| **Litecoin** | LTC (Native Bech32) | `ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg` |
+| **USDT** | BEP-20 (BNB Chain) | `0xC0DCB82231d14997Af7ce7b3D8558F5A9705B321` |
+| **TRON** | TRX (TRON) | `TCqMo27bo8WTpyVLrjsPmEdFW3zpnTmsaj` |
+| **Bitcoin** | BTC (Bitcoin) | `bc1qas3ejdkrjeadr9hpzh0gndkkt4xshypnjs05hz` |
+| **Litecoin** | LTC (Litecoin) | `ltc1qttc2hm2p74sw26c8tvjj9jlrjm536ngn72vlwg` |
 
 ---
 
 ## 📄 License
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.

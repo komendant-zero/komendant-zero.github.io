@@ -1,5 +1,5 @@
 /**
- * i18n.js — Internationalization & Localization Engine (RU / EN)
+ * i18n.js - Internationalization & Localization Engine (RU / EN)
  */
 
 const translations = {
